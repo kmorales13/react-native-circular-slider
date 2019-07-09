@@ -1,8 +1,6 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
+import React, { PureComponent, PropTypes } from 'react';
 import { G, Circle, Text, Line } from 'react-native-svg';
 import range from 'lodash.range';
-
 
 export default class ClockFace extends PureComponent {
 
@@ -13,8 +11,8 @@ export default class ClockFace extends PureComponent {
 
   render() {
     const { r, stroke } = this.props;
-    const faceRadius = r - 5;
-    const textRadius = r - 26;
+    const faceRadius = r - 2;
+    const textRadius = r - 20;
 
     return (
       <G>
@@ -27,7 +25,7 @@ export default class ClockFace extends PureComponent {
               <Line
                 key={i}
                 stroke={stroke}
-                strokeWidth={i % 4 === 0 ? 3 : 1}
+                strokeWidth={i % 2 === 0 ? 2 : 1}
                 x1={cos * faceRadius}
                 y1={sin * faceRadius}
                 x2={cos * (faceRadius - 7)}
@@ -36,18 +34,18 @@ export default class ClockFace extends PureComponent {
             );
           })
         }
-      <G transform={{translate: "0, -9"}}>
+        <G transform={{ translate: "0, -9" }}>
           {
-            range(12).map((h, i) => (
+            range(24).map((h, i) => (
               <Text
                 key={i}
                 fill={stroke}
-                fontSize="16"
+                fontSize="11"
                 textAnchor="middle"
-                x={textRadius * Math.cos(2 * Math.PI / 12 * i - Math.PI / 2 + Math.PI / 6)}
-                y={textRadius * Math.sin(2 * Math.PI / 12 * i - Math.PI / 2 + Math.PI / 6)}
+                x={textRadius * Math.cos(Math.PI / 12 * i - Math.PI / 1.33 + Math.PI / 4)}
+                y={textRadius * Math.sin(Math.PI / 12 * i - Math.PI / 1.33 + Math.PI / 4)}
               >
-                {h + 1}
+                {h}
               </Text>
             ))
           }
