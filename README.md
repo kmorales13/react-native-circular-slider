@@ -1,10 +1,6 @@
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
-[![Version](https://img.shields.io/npm/v/react-native-circular-slider.svg)](https://www.npmjs.com/package/react-native-circular-slider)
-[![Twitter Follow](https://img.shields.io/twitter/follow/bgryszko.svg?style=social&label=Follow)](https://twitter.com/bgryszko)
-
 # react-native-circular-slider :radio_button:
 
-React Native component for creating circular slider.
+React Native component for creating circular sliders. This is an *updated* version of [bartgryszko/react-native-circular-slider](https://github.com/bartgryszko/react-native-circular-slider).
 
 ## Example app – inspired by Apple's Bedtime :alarm_clock:
 (It's just an example what you can achieve – with this package you can create any circular slider)
@@ -13,10 +9,14 @@ React Native component for creating circular slider.
 
 ## Installation
 
-1. Install library and react-native-svg
+1. Install this library and react-native-svg
 
 	```
-	npm i --save react-native-circular-slider react-native-svg
+	npm i --save https://github.com/kmorales13/react-native-circular-slider.git react-native-svg
+	```
+	or
+	```
+	yarn add https://github.com/kmorales13/react-native-circular-slider.git react-native-svg
 	```
 2. Link native code for SVG
 
